@@ -144,7 +144,6 @@ body {
   transition: 0.5s;
 }
 
-
 .switch-container {
   display: flex;
   flex-direction: row;
@@ -281,18 +280,21 @@ body {
 }
 
 .contact-message {
-  display: flex;
-  flex-wrap: wrap;
-  flex: 1;
-  padding-right: 1rem;
+  width: 36rem;
 }
 
 .contact-message label {
   display: block;
   margin-bottom: 5px;
 }
+.textarea-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: auto;
+}
 
-.contact-message textarea {
+.textarea-container textarea {
   width: 100%;
   padding: 0.5rem;
   border: none;
@@ -300,6 +302,8 @@ body {
   border-radius: 5px;
   box-sizing: border-box;
   margin-bottom: 1rem; 
+  max-width: 100%;
+
 
   color:#414045;
   font-size: 0.875rem;
@@ -312,6 +316,7 @@ body {
   display: flex;
   justify-content: flex-end;
   margin-right: 1rem;
+  
 }
 
 
@@ -330,14 +335,16 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .contact-row,
+  .contact-message,
+  .button-box {
+    flex-direction: column;
+    flex-grow: wrap;
+    overflow: auto;
+  }
+
   .form-group-contact {
     width: 100%;
   }
-
 }
 
-@media screen and (max-width: 768px) {
-  .contact-message {
-    flex-basis: 50%;
-  }
-}
