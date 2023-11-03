@@ -48,7 +48,16 @@ body {
   display: flex;
   padding: 0 1rem;
   flex-direction: column;
-  justify-content: center;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+}
+
+
+.container-contact-sidebar {
+  --max-width: 1440px;
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+  max-width: 42rem;
   margin-top: 10rem;
   margin-bottom: 5rem;
 }
@@ -68,6 +77,16 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   padding: 2rem;
+  border-radius: 0.625rem;
+  background: var(--form-bg-color);
+  box-shadow: 40px 40px 60px 0px rgba(0, 0, 0, 0.10);
+}
+
+.wrapper-contact-sidebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
   border-radius: 0.625rem;
   background: var(--form-bg-color);
   box-shadow: 40px 40px 60px 0px rgba(0, 0, 0, 0.10);
@@ -246,6 +265,9 @@ body {
   outline: #651FFF;
 }
 
+
+// Section 2
+
 .contact-checkbox {
   display: flex;
   height: 3.5rem;
@@ -255,7 +277,7 @@ body {
 }
 
 .contact-checkbox input[type="checkbox"] {
-  display: none; /* Hide the default checkbox */
+  display: none; 
 }
 
 .contact-checkbox input[type="checkbox"] + label {
@@ -269,14 +291,14 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  width: 20px; /* Adjust the size of the custom checkbox */
-  height: 20px; /* Adjust the size of the custom checkbox */
-  border: 1px solid #ccc; /* Add a border for better visibility */
+  width: 20px; 
+  height: 20px;
+  border: 1px solid #ccc; 
   border-radius: 3px;
 }
 
 .contact-checkbox input[type="checkbox"]:checked + label:before {
-  background-color: #FD7918; /* Change the color of the checked checkbox */
+  background-color: #FD7918; 
 }
 
 .contact-message {
@@ -285,7 +307,7 @@ body {
 
 .contact-message label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 1rem;
 }
 .textarea-container {
   position: relative;
@@ -320,6 +342,107 @@ body {
 }
 
 
+// Section 3
+
+.left-row {
+  color: #FFF;
+  flex-direction: column;
+  background-color: #651FFF;
+  border-radius: 0.625rem 0 0 0.625rem;
+  padding: 1rem 2rem 1rem 2rem;
+  width: 33.33%; 
+  box-sizing: border-box;
+}
+
+.left-row h5 {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: -0.02rem;
+}
+
+.left-row h6 {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.left-row p {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.right-row {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem 1rem 2rem;
+  width: 66.67%; 
+  box-sizing: border-box;
+}
+
+.custom-select select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-info-item img {
+  width: 24px;
+  height: 24px;
+}
+
+.contact-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 1rem 0 1rem 0;
+}
+
+.contact-button {
+  border: none;
+  padding: 0.75rem 3rem;
+  border-radius: 0.3125rem;
+  background: #651FFF;
+  color: #FFF;
+}
+
+.contact-button:hover,
+.contact-button:focus {
+  border:none;
+  padding: 0.75rem 3rem;
+  border-radius: 0.3125rem;
+  background: #3d178f;
+  transition: 0.5s;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .left-row,
+  .right-row {
+    width: 100%;
+    border-radius: 0.625rem; 
+  }
+}
+
 @media screen and (max-width: 768px) {
   .container {
     padding: 0.5rem;
@@ -335,12 +458,11 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .contact-row,
-  .contact-message,
+
+  .form-group-contact,
   .button-box {
-    flex-direction: column;
-    flex-grow: wrap;
-    overflow: auto;
+    display: flex;
+    justify-content: flex-start;
   }
 
   .form-group-contact {
