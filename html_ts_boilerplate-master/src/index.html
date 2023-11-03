@@ -6,15 +6,54 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="/favicon.png" type="image/x-icon">
+    <!-- <link rel="stylesheet" type="text/css" href="./reset.css"> -->
     <link rel="stylesheet" href="/styles.css">
-    <title>Document</title>
+    <title>Login Form</title>
 </head>
-<body>
-    <h1>
-        Hello World
-    </h1>
-    <img src="/assets/images/cat.jpeg" alt="" width="300">
+<body>  
+    <section>
+        <div class="container">
+            <div class="wrapper-main">
+                <form action="/action_page.php" target="_blank" method="post">
 
+                    <div class="form-group">
+                        <label for="UserName">Username:</label>
+                        <input type="text" id="UserName" name="UserName" placeholder="Enter your username here" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="" required>
+                    </div>
+
+                    <div class="switch-container">
+                        <label class="switch">
+                            <input type="checkbox" class="checkbox" id="toggle">
+                            <span class="slider"></span>
+                        </label>
+                    <label class="switch-label" for="toggle">Subscribe to news</label>
+                    </div>
+                    <div class="button-container">
+                        <button class="primary-button">Sign in</button>
+                    </div>
+                    <div class="forgot-button">
+                        <a class="forgot-button-style" href="#">Forgot your password?</a>
+                    </div>
+
+                    <div class="separator"></div>
+
+                    <div class="form-subsection">
+                        <p class="subsection-text">or continue with</p>
+                        <div class="subsection-button">
+                            <button class="button"><img src="./assets/images/google.svg"></button>
+                            <button class="button"><img src="./assets/images/facebook.svg" style="width: 1.5rem; height: 1.5rem;"></button>    
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </section>
 
     <script src="/scripts.js"></script>
 </body>
