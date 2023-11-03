@@ -16,19 +16,43 @@ body {
   background-color: var(--main-bg-color);
 }
 
-.container {
+.secondary-header {
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.5rem;
+  letter-spacing: -0.04rem;
+  color: #130F1C;
+}
+
+.container-login {
   --max-width: 1440px;
   width: min(var(--max-width), 100% - (var(--padding) * 2));
   margin-inline: auto;
   max-width: 27rem;
   padding: 0 1rem;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 5rem;
 }
 
-.wrapper-main {
+.container-contact {
+  --max-width: 1440px;
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+  max-width: 42rem;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10rem;
+}
+
+.wrapper-login {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -38,7 +62,43 @@ body {
   box-shadow: 40px 40px 60px 0px rgba(0, 0, 0, 0.10);
 }
 
-.form-group label {
+.wrapper-contact {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 2rem;
+  border-radius: 0.625rem;
+  background: var(--form-bg-color);
+  box-shadow: 40px 40px 60px 0px rgba(0, 0, 0, 0.10);
+}
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contact-label {
+  margin-bottom: 0.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-group-contact {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: calc(50% - 1rem);
+  box-sizing: border-box;
+  margin-bottom: 0.5rem;
+}
+
+.form-group label, .form-group-contact label {
   flex: 1;
   font-size: 1rem;
   font-style: normal;
@@ -46,7 +106,7 @@ body {
   line-height: 1.5rem;
 }
 
-.form-group input {
+.form-group input, .form-group-contact input {
   flex: 2;
   font-size: 1rem;
   font-style: normal;
@@ -62,6 +122,7 @@ body {
   display: flex;
   flex-direction: column;
   align-self: stretch;
+  margin-top: 1rem;
 }
 
 .primary-button {
@@ -82,19 +143,13 @@ body {
   transition: 0.5s;
 }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-}
 
 .switch-container {
   display: flex;
   flex-direction: row;
   align-items: left;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .switch-label {
@@ -203,4 +258,11 @@ body {
     margin-top: 0;
     margin-left: 0.5rem;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .form-group-contact {
+    width: 100%; /* On smaller screens, each box takes 100% width, creating a single column layout */
+  }
+
 }
