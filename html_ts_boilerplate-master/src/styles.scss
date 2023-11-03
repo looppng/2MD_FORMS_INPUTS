@@ -347,11 +347,11 @@ body {
 .left-row {
   color: #FFF;
   flex-direction: column;
+  flex: 1; 
   background-color: #651FFF;
+  width: 33.33%;
   border-radius: 0.625rem 0 0 0.625rem;
   padding: 1rem 2rem 1rem 2rem;
-  width: 33.33%; 
-  box-sizing: border-box;
 }
 
 .left-row h5 {
@@ -379,9 +379,9 @@ body {
 .right-row {
   display: flex;
   flex-direction: column;
-  padding: 1rem 2rem 1rem 2rem;
-  width: 66.67%; 
-  box-sizing: border-box;
+  flex: 2;
+  width: 66.66%;
+  padding: 1rem 2rem;
 }
 
 .custom-select select {
@@ -401,13 +401,34 @@ body {
 .contact-info-item {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.5rem; 
 }
 
 .contact-info-item img {
   width: 24px;
   height: 24px;
 }
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto); 
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media screen and (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 
 .contact-button-container {
   display: flex;
